@@ -1,0 +1,116 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h3 class="text-center mb-3">
+          <a href="/dashboard"><i class="fas fa-long-arrow-alt-left ml-0"></i></a>
+          Edit Your Information</h3>
+        <h5 class="text-center mb-3">
+            <%= user.name %>
+        </h5>
+        <% include ./partials/messages %>
+        <form action="/dashboard" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="Name"
+                value="<%= typeof user.name != 'undefined' ? user.name : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="education">Education</label>
+            <input
+              type="text"
+              id="education"
+              name="education"
+              class="form-control"
+              placeholder="Enter Education"
+              value="<%= typeof user.education != 'undefined' ? user.education : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="about_me">About me</label>
+            <input
+              type="text"
+              id="about_me"
+              name="about_me"
+              class="form-control"
+              placeholder="Write something attractive about you..."
+              value="<%= typeof user.about_me != 'undefined' ? user.about_me : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="work_position">Work Position</label>
+            <input
+              type="text"
+              id="work_position"
+              name="work_position"
+              class="form-control"
+              placeholder="Work Position"
+              value="<%= typeof user.work_position != 'undefined' ? user.work_position : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="work_employer">Work Employer</label>
+            <input
+              type="text"
+              id="work_employer"
+              name="work_employer"
+              class="form-control"
+              placeholder="Work Employer"
+              value="<%= typeof user.work_employer != 'undefined' ? user.work_employer : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              class="form-control"
+              placeholder="Location"
+              value="<%= typeof user.location != 'undefined' ? user.location : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="relationship_status">Relationship Status</label>
+            <select class="custom-select" name="relationship_status" id="relationship_status">
+                <option selected><%= typeof user.relationship_status != 'undefined' ? user.relationship_status : 'Select' %></option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorsed">Divorsed</option>
+                <option value="Saperated">Saperated</option>
+                <option value="Widowed">Widowed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="looking_for">Looking For</label>
+            <select class="custom-select" name="looking_for" id="looking_for">
+                <option selected><%= typeof user.looking_for != 'undefined' ? user.looking_for : 'Select' %></option>
+                <option value="Commited Relationship">Commited Relationship</option>
+                <option value="Something Casual">Something Casual</option>
+                <option value="Marrige">Marrige</option>
+                <option value="Dont Know Yet">Dont Know Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="intrest">Intrests</label>
+            <input
+              type="text"
+              id="intrest"
+              name="intrest"
+              class="form-control"
+              placeholder="Intrests"
+              value="<%= typeof user.intrest != 'undefined' ? user.intrest : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-outline-dark btn-block">
+            Save
+          </button>
+        </form>
+    </div>
+    </div>
+</div>

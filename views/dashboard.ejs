@@ -1,0 +1,52 @@
+<div class="row mt-5">
+    <div class="col-md-12 m-auto">
+      <div class="card card-body">
+            <h3 class="text-center">
+              Welcome! <%= user.name %>
+              <a href="/editInfo"> <i class="fas fa-user-edit ml-2"></i></a>
+            </h3>
+            <p class="text-center">
+              <a href="/search" class="btn btn-sm btn-outline-success mr-2">Search</a>
+              <a href="/users/logout" class="btn btn-sm btn-outline-danger mr-0">Logout</a>
+            </p>
+        <div class="table-responsive-sm">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <th scope="row">Email</th>
+                <td><%= user.email %></td>
+              </tr>
+              <tr>
+                <th scope="row">Education</th>
+                <td><%= typeof user.education != 'undefined' ? user.education : 'not defined' %></td>
+              </tr>
+              <tr>
+                <th scope="row">Work Position</th>
+                <td><%= typeof user.work_position != 'undefined' ? user.work_position : 'not defined' %></td>
+              </tr>
+              <tr>
+                <th scope="row">Work Employer</th>
+                <td><%= typeof user.work_employer != 'undefined' ? user.work_employer : 'not defined' %></td>
+              </tr>
+              <tr>
+                <th scope="row">Location</th>
+                <td><%= typeof user.location != 'undefined' ? user.location : 'not defined' %></td>
+              </tr>
+              <tr>
+                <th scope="row">Relationship Status</th>
+                <td><%= typeof user.relationship_status != 'undefined' ? user.relationship_status : 'not defined' %></td>
+              </tr>
+              <tr>
+                <th scope="row">Looking For</th>
+                <td><%= typeof user.looking_for != 'undefined' ? user.looking_for : 'not defined' %></td>
+              </tr>
+              <tr>
+                <th scope="row">Intrests</th>
+                <td><%= typeof user.intrest != 'undefined' ? user.intrest : 'not defined' %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
